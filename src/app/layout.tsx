@@ -28,11 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <FirebaseProvider options={firebaseOptions}>
-            <CurrentUserProvider>
-              {children}
-            </CurrentUserProvider>
-          </FirebaseProvider>
+          {children}
           <Toaster />
         </ThemeProvider>
       </body>

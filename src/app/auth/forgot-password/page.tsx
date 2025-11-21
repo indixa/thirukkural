@@ -8,6 +8,7 @@ import { Spinner } from "@/components/ui/spinner";
 import { useFirebase } from "@/context/firebase/Context";
 import { clearInput, getInputValue } from "@/lib/utils";
 import { sendPasswordResetEmail } from "firebase/auth";
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { toast } from "sonner";
 
@@ -65,9 +66,9 @@ export default function Page() {
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}
-        <a href="/auth/signup" className="underline underline-offset-4">
+        <Link href="/auth/signup" className="underline underline-offset-4">
           Sign up
-        </a>
+        </Link>
       </div>
     </form>
   )

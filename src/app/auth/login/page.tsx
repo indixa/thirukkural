@@ -11,6 +11,7 @@ import GoogleSignInButton from "@/components/google-signin-button"
 import BreadcrumbHeading from "@/components/breadcrumb-heading"
 import { Spinner } from "@/components/ui/spinner"
 import { useAuth } from "@/context/firebase/AuthContext"
+import Link from "next/link"
 
 export default function Page() {
   const { auth, signIn } = useAuth();
@@ -115,12 +116,12 @@ export default function Page() {
         <div className="grid gap-3">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
-            <a
+            <Link
               href="/auth/forgot-password"
               className="ml-auto text-sm underline-offset-4 hover:underline"
             >
               Forgot password?
-            </a>
+            </Link>
           </div>
           <Input id="password" type="password" required={passwordRequired} />
         </div>
@@ -137,9 +138,9 @@ export default function Page() {
       </div>
       <div className="text-center text-sm">
         Don&apos;t have an account?{" "}
-        <a href="/auth/signup" className="underline underline-offset-4">
+        <Link href="/auth/signup" className="underline underline-offset-4">
           Sign up
-        </a>
+        </Link>
       </div>
     </form>
   )

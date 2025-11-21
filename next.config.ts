@@ -1,6 +1,7 @@
 import fs from 'fs-extra';
 import path from 'path';
 import type { NextConfig } from "next";
+import createNextIntlPlugin from 'next-intl/plugin'
 
 // eslint-disable-next-line no-unused-vars
 const withPluginRoutes = (pluginName) => {
@@ -25,7 +26,7 @@ const nextConfig: NextConfig = {
         // 1. Source: This is the path the browser requests on your custom domain.
         // It matches the Firebase Auth handler paths (__/auth/handler, __/auth/iframe, etc.).
         source: "/__/:path*",
-        
+
         // 2. Destination: This is where the Next.js server secretly fetches the file from.
         // It points to the *actual* location of the Firebase Auth handler files.
         destination: `https://${projectId}.web.app/__/:path*`,
@@ -88,4 +89,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin()
+export default withNextIntl(nextConfig)

@@ -1,5 +1,5 @@
-export const appName = process.env.NEXT_PUBLIC_APP_NAME || "NextFire";
-export const appTitle = process.env.NEXT_PUBLIC_APP_TITLE || "Next.js + Firebase + Shadcn UI Template";
+export const appName = process.env.NEXT_PUBLIC_APP_NAME || "திருக்குறள்";
+export const appTitle = process.env.NEXT_PUBLIC_APP_TITLE || "தமிழ் இலக்கியம்";
 export const hostname = process.env.NEXT_PUBLIC_HOSTNAME;
 export const baseUrl = hostname ? `https://${hostname}` : "";
 export const emailLinkLoginUrl = `${baseUrl}/auth/email-link-login`;

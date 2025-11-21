@@ -4,7 +4,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Button } from '@/components/ui/button';
 
 type PageProps = Promise<{
-    userId: string;
+  userId: string;
 }>
 
 export default async function Page(params: PageProps) {
